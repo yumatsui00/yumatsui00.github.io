@@ -1,32 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>POCO VISION</title>
-    <!-- Add some CSS to change client UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yumatsui-poco-vision</title>
     <style>
-    body {
-        background-color: #232F3E;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F7F78A;
+            color: #000;
         }
-    label, button {
-        color: #FF9900;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        margin-left: 40px;
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: #DDE6FF;
+            overflow: hidden;
         }
-     input {
-        color: #232F3E;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        margin-left: 20px;
+
+        .bg-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 120%;
+            height: 120%;
+            background-color: #F7F78A;
+            clip-path: polygon(20% 10%, 80% 0%, 100% 50%, 80% 100%, 30% 90%, 0% 50%);
+        }
+
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.2em;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 5em;
+            margin: 0;
+        }
+
+        .content p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .content .smiley {
+            font-size: 3em;
+            margin-top: 20px;
         }
     </style>
-    <script>
-    </script>
 </head>
 <body>
-    <form>
-        <label>poco poco</label>
-    </form>
+    <div class="container">
+        <div class="bg-shape"></div>
+        
+        <!-- Header -->
+        <div class="header">yumatsui00</div>
+        
+        <!-- Navigation -->
+        <!-- <div class="nav"></div> -->
+        
+        <!-- Main Content -->
+        <div class="content">
+            <p>Our New Site<br>Is Coming Soon</p>
+            <h1>Stay<br>Tuned</h1>
+            <div class="smiley">😊</div>
+        </div>
+    </div>
 </body>
 </html>
