@@ -1,91 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yumatsui-poco-vision</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #F7F78A;
-            color: #000;
-        }
-
-        .container {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-            background: #DDE6FF;
-            overflow: hidden;
-        }
-
-        .bg-shape {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 120%;
-            height: 120%;
-            background-color: #F7F78A;
-            clip-path: polygon(20% 10%, 80% 0%, 100% 50%, 80% 100%, 30% 90%, 0% 50%);
-        }
-
-        .header {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 2em;
-            font-weight: bold;
-        }
-
-        .nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 1.2em;
-        }
-
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .content h1 {
-            font-size: 5em;
-            margin: 0;
-        }
-
-        .content p {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
-
-        .content .smiley {
-            font-size: 3em;
-            margin-top: 20px;
-        }
-    </style>
+    <title>My Stylish Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="bg-shape"></div>
-        
-        <!-- Header -->
-        <div class="header">yumatsui00</div>
-        
-        <!-- Navigation -->
-        <!-- <div class="nav"></div> -->
-        
-        <!-- Main Content -->
-        <div class="content">
-            <a href="https://github.com/oakoudad/badge42"><img src="https://badge.mediaplus.ma/colorfulwaves/yumatsui" alt="yumatsui's 42 stats" /></a>
-            <p>My New Site<br>Is Coming Soon</p>
-            <h1>Stay<br>Tuned</h1>
-            <div class="smiley">😊</div>
+    <header id="header" class="header">
+        <nav class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
+            <h1>Your Name</h1>
+            <p>Web Developer & Designer</p>
+            <button class="cta-button">Get in touch</button>
         </div>
-    </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <p class="section-text fade-in">
+                I'm a passionate web developer and designer with a keen eye for creating beautiful, functional websites. 
+                With expertise in modern web technologies, I bring ideas to life through clean code and stunning visuals.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <h3>Project 1</h3>
+                    <p>A brief description of Project 1</p>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Project 2</h3>
+                    <p>A brief description of Project 2</p>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Project 3</h3>
+                    <p>A brief description of Project 3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get in Touch</h2>
+            <form class="contact-form fade-in">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
